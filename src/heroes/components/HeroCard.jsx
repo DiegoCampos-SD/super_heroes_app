@@ -1,41 +1,31 @@
 import { Link } from "react-router-dom";
 
-const CharactersByHero = ({ alter_ego, characters }) => {
-  //   if (alter_ego === characters) {
-  //     return <></>;
-  //   }
-  return alter_ego === characters ? <></> : <p>{characters}</p>;
+const CharactersByHero = ({ full_name, characters }) => {
+  return full_name === characters ? <></> : <p>{characters}</p>;
 };
 
 export const HeroCard = ({
   id,
   superhero,
-  publisher,
-  alter_ego,
+  full_name,
   first_appearance,
   characters,
+  image,
 }) => {
-  const heroImgUrl = `/heroes/${id}.jpg`;
-
-  //   const characterByHero = <p>{characters}</p>;
-
   return (
     <div className="col animate__animated animate__fadeIn">
       <div className="card">
         <div className="row no-gutters">
           <div className="col-4">
-            <img src={heroImgUrl} className="card-img" alt={superhero} />
+            <img src={image} className="card-img" alt={superhero} />
           </div>
 
           <div className="col-8">
             <div className="card-body">
               <h5 className="card-title">{superhero}</h5>
-              <p className="card-text">{alter_ego}</p>
+              <p className="card-text">{full_name}</p>
 
-              {/* {alter_ego !== characters && <p>{characters}</p>} */}
-              {/* {alter_ego !== characters && characterByHero} */}
-
-              <CharactersByHero alter_ego={alter_ego} characters={characters} />
+              <CharactersByHero full_name={full_name} characters={characters} />
 
               <p className="card-text">
                 <small className="text-muted">{first_appearance}</small>

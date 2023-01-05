@@ -1,5 +1,10 @@
-import { heroes } from "../data/heroes";
+// import { useFetchHeroById } from "../hooks/useFetchHeroById";
+import { useFetchHeroes } from "../hooks/useFetchHeroes";
 
 export const getHeroById = (id) => {
-  return heroes.find((hero) => hero.id === id);
+  const { heroes } = useFetchHeroes();
+
+  const heroeFound = heroes.filter((hero) => hero.id == id);
+
+  return heroeFound;
 };
