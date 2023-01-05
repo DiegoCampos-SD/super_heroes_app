@@ -12,6 +12,11 @@ export const getHeroesApi = async () => {
     alignment: hero.biography.alignment,
     occupation: hero.work.occupation,
     image: hero.images.lg,
+    placeOfBirth: hero.biography.placeOfBirth,
+    alignment: hero.biography.alignment,
+    groupAffiliation: hero.connections.groupAffiliation,
+    relatives: hero.connections.relatives,
+    race: hero.appearance.race,
   }));
 
   return fixedHeroes;

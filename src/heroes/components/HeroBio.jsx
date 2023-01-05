@@ -8,6 +8,11 @@ export const HeroBio = ({
   publisher,
   occupation,
   image,
+  placeOfBirth,
+  alignment,
+  groupAffiliation,
+  relatives,
+  race,
 }) => {
   return (
     <>
@@ -27,10 +32,23 @@ export const HeroBio = ({
           <li className="list-group-item">
             <b>First appearance:</b> {first_appearance}
           </li>
+          <li className="list-group-item">
+            <b>Place of Birth:</b> {placeOfBirth}
+          </li>
+          <li className="list-group-item">
+            <b>Group Affiliation:</b> {groupAffiliation}
+          </li>
+          <li className="list-group-item">
+            <b>Relatives:</b> {relatives}
+          </li>
         </ul>
 
         <h5 className="mt-3">Occupation</h5>
         <p>{occupation}</p>
+        <h5 className="mt-3">Alignment</h5>
+        <p>{alignment}</p>
+        <h5 className="mt-3">Race</h5>
+        <p>{race}</p>
       </div>
     </>
   );
